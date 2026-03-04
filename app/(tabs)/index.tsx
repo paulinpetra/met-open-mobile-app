@@ -4,7 +4,7 @@ export default function Index() {
   return (
     <View className="flex-1 items-center justify-center bg-background">
       <Text className="text-xl font-heading text-destructive">
-        Welcome to Nativewind!
+        Welcome to MetOpen!
       </Text>
     </View>
   );

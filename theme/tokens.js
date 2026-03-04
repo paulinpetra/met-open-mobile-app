@@ -1,5 +1,5 @@
 
-export const tokens = {
+ const tokens = {
   colors: {
     light: {
       background: "rgb(250 246 243)",
@@ -62,3 +62,4 @@ export const tokens = {
     lg: 12,
   },
 };
+module.exports = { tokens };

@@ -1,14 +1,15 @@
 import { tokens } from "@/theme/tokens";
 import { Tabs } from "expo-router";
 import { Heart, Home, Layers, MapPin } from "lucide-react-native";
-import { useColorScheme } from "react-native";
 
 export default function TabsLayout() {
-  const scheme = useColorScheme();
-  const theme =
-    scheme === "dark"
-      ? tokens.colors.dark
-      : tokens.colors.light;
+    //implement modes later:
+  //const scheme = useColorScheme();
+  //const theme =
+  //  scheme === "dark"
+  //    ? tokens.colors.dark
+  //    : tokens.colors.light;
+const theme = tokens.colors.dark;
 
   return (
     <Tabs

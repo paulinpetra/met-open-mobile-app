@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const { tokens } = require("./src/theme/tokens");
+const { tokens } = require("./theme/tokens");
 
 module.exports = {
   content: [
@@ -26,37 +26,37 @@ module.exports = {
       },
 
       colors: {
-        background: tokens.colors.light.background,
-        foreground: tokens.colors.light.foreground,
+        background: tokens.colors.dark.background,
+        foreground: tokens.colors.dark.foreground,
 
-        card: tokens.colors.light.card,
-        "card-foreground": tokens.colors.light.cardForeground,
+        card: tokens.colors.dark.card,
+        "card-foreground": tokens.colors.dark.cardForeground,
 
         primary: {
-          DEFAULT: tokens.colors.light.primary,
-          foreground: tokens.colors.light.primaryForeground,
+          DEFAULT: tokens.colors.dark.primary,
+          foreground: tokens.colors.dark.primaryForeground,
         },
 
         secondary: {
-          DEFAULT: tokens.colors.light.secondary,
-          foreground: tokens.colors.light.secondaryForeground,
+          DEFAULT: tokens.colors.dark.secondary,
+          foreground: tokens.colors.dark.secondaryForeground,
         },
 
         muted: {
-          DEFAULT: tokens.colors.light.muted,
-          foreground: tokens.colors.light.mutedForeground,
+          DEFAULT: tokens.colors.dark.muted,
+          foreground: tokens.colors.dark.mutedForeground,
         },
 
         accent: {
-          DEFAULT: tokens.colors.light.accent,
-          foreground: tokens.colors.light.accentForeground,
+          DEFAULT: tokens.colors.dark.accent,
+          foreground: tokens.colors.dark.accentForeground,
         },
 
-        destructive: tokens.colors.light.destructive,
+        destructive: tokens.colors.dark.destructive,
 
-        border: tokens.colors.light.border,
-        input: tokens.colors.light.input,
-        ring: tokens.colors.light.ring,
+        border: tokens.colors.dark.border,
+        input: tokens.colors.dark.input,
+        ring: tokens.colors.dark.ring,
       },
     },
   },
