@@ -1,77 +1,43 @@
 import { tokens } from "@/theme/tokens";
-import { Tabs } from "expo-router";
-import { Heart, Home, Layers, MapPin } from "lucide-react-native";
+import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
 
-export default function TabsLayout() {
-    //implement modes later:
-  //const scheme = useColorScheme();
-  //const theme =
-  //  scheme === "dark"
-  //    ? tokens.colors.dark
-  //    : tokens.colors.light;
-const theme = tokens.colors.dark;
+export default function TabLayout() {
+  const theme = tokens.colors.dark;
 
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-
-        tabBarStyle: {
-          backgroundColor: theme.background,
-          borderTopColor: theme.border,
-          height: 60,
-          paddingBottom: 8,
-          paddingTop: 8,
-        },
-
-        tabBarActiveTintColor: theme.primary,
-        tabBarInactiveTintColor: theme.tabInactive,
-
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: "500",
-        },
-      }}
+    <NativeTabs
+      tintColor={theme.primary}
+      backgroundColor={theme.background}
     >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Home color={color} size={size} />
-          ),
-        }}
-      />
+      <NativeTabs.Trigger name="index">
+        <Icon
+         sf={{ default: "house", selected: "house.fill" }}
+         drawable="ic_menu_view"                 
+        />
+      <Label>Home</Label>
+      </NativeTabs.Trigger>
 
-      <Tabs.Screen
-        name="departments"
-        options={{
-          title: "Departments",
-          tabBarIcon: ({ color, size }) => (
-            <Layers color={color} size={size} />
-          ),
-        }}
-      />
+      <NativeTabs.Trigger name="departments">
+         <Icon
+          sf={{ default: "square.grid.2x2", selected: "square.grid.2x2.fill" }}
+          drawable="ic_menu_agenda"
+        />
+        <Label>Departments</Label>
+      </NativeTabs.Trigger>
 
-      <Tabs.Screen
-        name="tours"
-        options={{
-          title: "Tours",
-          tabBarIcon: ({ color, size }) => (
-            <MapPin color={color} size={size} />
-          ),
-        }}
-      />
+      <NativeTabs.Trigger name="tours">
+        <Icon 
+        sf={{ default: "map", selected: "map.fill" }}
+        drawable="ic_menu_mapmode"
+         />
+        <Label>Tours</Label>
+      </NativeTabs.Trigger>
 
-      <Tabs.Screen
-        name="favorites"
-        options={{
-          title: "Favorites",
-          tabBarIcon: ({ color, size }) => (
-            <Heart color={color} size={size} />
-          ),
-        }}
-      />
-    </Tabs>
+      <NativeTabs.Trigger name="favorites">
+        <Icon sf={{ default: "heart", selected: "heart.fill" }}
+         drawable="ic_menu_favorite" />
+        <Label>Favorites</Label>
+      </NativeTabs.Trigger>
+    </NativeTabs>
   );
 }
